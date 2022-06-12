@@ -33,15 +33,15 @@ jobs:
     steps:
      - uses: actions/checkout@v3
      
-      - name: Kubernetes Set Context
-        uses: Azure/k8s-set-context@v2
-        with:
-           method: kubeconfig
-           kubeconfig: ${{secret.K8S_CONFIG}}
+     - name: Kubernetes Set Context
+       uses: Azure/k8s-set-context@v2
+       with:
+          method: kubeconfig
+          kubeconfig: ${{secret.K8S_CONFIG}}
      
-      - name: Deploy to Kubernetes cluster
-        uses: Azure/k8s-deploy@v3.1
-        with:
-          images: tsecco/kube-news:latest
-          manifest: |
-            k8s/deployment.yml
+     - name: Deploy to Kubernetes cluster
+       uses: Azure/k8s-deploy@v3.1
+       with:
+         images: tsecco/kube-news:latest
+         manifest: |
+           k8s/deployment.yml
