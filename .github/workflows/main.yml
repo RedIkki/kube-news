@@ -45,4 +45,4 @@ jobs:
        with:
          images: tsecco/kube-news:latest
          manifest: |
-           k8s/deployment.yml
+           k8s/deployment.yaml
