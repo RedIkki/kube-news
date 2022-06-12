@@ -44,5 +44,5 @@ jobs:
        uses: Azure/k8s-deploy@v3.1
        with:
          images: tsecco/kube-news:latest
-         manifest: |
+         manifests: |
            k8s/deployment.yaml
