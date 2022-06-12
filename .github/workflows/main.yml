@@ -28,7 +28,7 @@ jobs:
           tags: |
             tsecco/kube-news:latest
             tsecco/kube-news:${{github.run_number}}
-   CI:
+   CD:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
